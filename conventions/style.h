@@ -4,7 +4,8 @@
 #define REFLECTION_CONVENTIONS_STYLE
 
 #include "macros.h"
-#include "setup.h"
+#include  "setup.h"
+#include  "files.h"
 
 #ifdef  FILE
 #error "FILE already defined."
@@ -13,7 +14,7 @@
 
 namespace FILE {
 
-class style {
+class Style: USINGS_TYPE {
 
 	public:
 
@@ -22,7 +23,7 @@ class style {
 };}
 
 template<class type>
-using alias_type = FILE::style::alias_type<type>;
+using alias_type = FILE::Style::alias_type<type>;
 
 #undef FILE
 

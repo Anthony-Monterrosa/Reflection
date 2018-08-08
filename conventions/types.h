@@ -7,7 +7,8 @@
 #include <cstddef>
 
 #include "macros.h"
-#include "setup.h"
+#include  "setup.h"
+#include  "files.h"
 
 #ifdef  FILE
 #error "FILE already defined."
@@ -16,7 +17,7 @@
 
 namespace FILE {
 	
-class types {
+class Types: USINGS_TYPE {
 	
 	using uint8_t  = std::uint8_t;
 	using uint16_t = std::uint16_t;
@@ -57,27 +58,27 @@ class types {
 	using none         = void;
 };}
 
-using  bit   = FILE::types::bit;
-using ubit8  = FILE::types::ubit8;
-using ubit16 = FILE::types::ubit16;
-using ubit32 = FILE::types::ubit32;
-using ubit64 = FILE::types::ubit64;
+using  bit   = FILE::Types::bit;
+using ubit8  = FILE::Types::ubit8;
+using ubit16 = FILE::Types::ubit16;
+using ubit32 = FILE::Types::ubit32;
+using ubit64 = FILE::Types::ubit64;
 
-using sbit8  = FILE::types::sbit8;
-using sbit16 = FILE::types::sbit16;
-using sbit32 = FILE::types::sbit32;
-using sbit64 = FILE::types::sbit64;
+using sbit8  = FILE::Types::sbit8;
+using sbit16 = FILE::Types::sbit16;
+using sbit32 = FILE::Types::sbit32;
+using sbit64 = FILE::Types::sbit64;
 
-using fbit32 = FILE::types::fbit32;
-using fbit64 = FILE::types::fbit64;
-using fbit80 = FILE::types::fbit80;
+using fbit32 = FILE::Types::fbit32;
+using fbit64 = FILE::Types::fbit64;
+using fbit80 = FILE::Types::fbit80;
 
-using utf8   = FILE::types::utf8;
-using utf16  = FILE::types::utf16;
-using utf32  = FILE::types::utf32;
+using utf8   = FILE::Types::utf8;
+using utf16  = FILE::Types::utf16;
+using utf32  = FILE::Types::utf32;
 
-using null_pointer = FILE::types::null_pointer;
-using none         = FILE::types::none;
+using null_pointer = FILE::Types::null_pointer;
+using none         = FILE::Types::none;
 
 #undef FILE
 

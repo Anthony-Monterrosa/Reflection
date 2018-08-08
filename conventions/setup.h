@@ -12,13 +12,28 @@ namespace Files {
 	using namespace Scope::Implementation;
 }
 
-namespace SPACE(Files) {
-	namespace Reflection::Conventions {}
+namespace IMPLEMENTATION(Files) {
+	namespace Reflection {
+		namespace Scope {
+			namespace Implementation {}
+		}
+		using namespace Scope::Implementation;
+	}
 }
+
+namespace IMPLEMENTATION(Files)      {
+namespace IMPLEMENTATION(Reflection) {
+	namespace Conventions {
+		namespace Scope {
+			namespace Implementation {}
+		}
+	using namespace Scope::Implementation;
+	}
+}}
 
 #ifdef  NEW_FILE
 #error "NEW_FILE already defined."
 #endif
-#define NEW_FILE(_name_) SPACE(Files)::_name_
+#define NEW_FILE(_name_) IMPLEMENTATION(Files)::_name_
 
 #endif

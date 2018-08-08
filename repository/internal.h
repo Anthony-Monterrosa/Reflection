@@ -9,12 +9,18 @@
 // Next, setups in order.
 #include "../conventions/setup.h"
 #include "setup.h"
+#include "../objects/setup.h"
 
 // Standard Library
 
 // Declarations
+#include "../objects/include.declarations.h"
+
+// Headers
+#include "../objects/include.headers.h"
 
 // Implementations
+#include "../objects/include.all.h"
 
 // Rest
 
