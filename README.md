@@ -1,2 +1,2 @@
 # Reflection
-Basal reflection and metaprogramming repository for c++.
+Basal repository for reflection, metaprogramming, and OOP in c++.
