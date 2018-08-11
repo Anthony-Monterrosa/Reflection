@@ -10,21 +10,22 @@
 #ifdef  FILE
 #error "FILE already defined."
 #endif
-#define FILE NEW_FILE(IMPLEMENTATION(Reflection)\
-                    ::IMPLEMENTATION(Objects))
+#define FILE NEW_FILE(IMPLEMENTATION (Reflection)\
+                    ::IMPLEMENTATION    (Objects))
 
 namespace FILE {
 
-class Object_Header: HEADER_TYPE, public Object_Declaration {
+template<>
+class Object<Partial>: PARTIAL_CLASS, public Object<Declaration> {
 
-	Object_Header() = delete;
+	Object() = delete;
 
 	template<class subtype>
 	struct object {};
 };
 
 	template<>
-	struct Object_Header::object<null_pointer> {};
+	struct Object<Partial>::object<null_pointer> {};
 }
 
 #undef FILE

@@ -17,10 +17,10 @@
 #include "../objects/include.declarations.h"
 
 // Headers
-#include "../objects/include.headers.h"
+#include "../objects/include.partials.h"
 
 // Implementations
-#include "../objects/include.all.h"
+#include "../objects/include.complete.h"
 
 // Rest
 

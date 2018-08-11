@@ -17,7 +17,7 @@
 
 namespace FILE {
 	
-class Types: USINGS_TYPE {
+class Basic_Types: TYPES {
 	
 	using uint8_t  = std::uint8_t;
 	using uint16_t = std::uint16_t;
@@ -58,27 +58,27 @@ class Types: USINGS_TYPE {
 	using none         = void;
 };}
 
-using  bit   = FILE::Types::bit;
-using ubit8  = FILE::Types::ubit8;
-using ubit16 = FILE::Types::ubit16;
-using ubit32 = FILE::Types::ubit32;
-using ubit64 = FILE::Types::ubit64;
+using  bit   = FILE::Basic_Types::bit;
+using ubit8  = FILE::Basic_Types::ubit8;
+using ubit16 = FILE::Basic_Types::ubit16;
+using ubit32 = FILE::Basic_Types::ubit32;
+using ubit64 = FILE::Basic_Types::ubit64;
 
-using sbit8  = FILE::Types::sbit8;
-using sbit16 = FILE::Types::sbit16;
-using sbit32 = FILE::Types::sbit32;
-using sbit64 = FILE::Types::sbit64;
+using sbit8  = FILE::Basic_Types::sbit8;
+using sbit16 = FILE::Basic_Types::sbit16;
+using sbit32 = FILE::Basic_Types::sbit32;
+using sbit64 = FILE::Basic_Types::sbit64;
 
-using fbit32 = FILE::Types::fbit32;
-using fbit64 = FILE::Types::fbit64;
-using fbit80 = FILE::Types::fbit80;
+using fbit32 = FILE::Basic_Types::fbit32;
+using fbit64 = FILE::Basic_Types::fbit64;
+using fbit80 = FILE::Basic_Types::fbit80;
 
-using utf8   = FILE::Types::utf8;
-using utf16  = FILE::Types::utf16;
-using utf32  = FILE::Types::utf32;
+using utf8   = FILE::Basic_Types::utf8;
+using utf16  = FILE::Basic_Types::utf16;
+using utf32  = FILE::Basic_Types::utf32;
 
-using null_pointer = FILE::Types::null_pointer;
-using none         = FILE::Types::none;
+using null_pointer = FILE::Basic_Types::null_pointer;
+using none         = FILE::Basic_Types::none;
 
 #undef FILE
 

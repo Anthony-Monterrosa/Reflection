@@ -7,5 +7,6 @@
 
 #include DECLARATION(object)
 #include DECLARATION(list)
+#include DECLARATION(variadics)
 
 #endif

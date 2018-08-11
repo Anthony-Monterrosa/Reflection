@@ -1,36 +1,60 @@
 #pragma once 
 
-#ifndef REFLECTION_CONVENTIONS_STYLE
-#define REFLECTION_CONVENTIONS_STYLE
+#ifndef REFLECTION_CONVENTIONS_FILES
+#define REFLECTION_CONVENTIONS_FILES
 
 #include "macros.h"
 #include "setup.h"
 
+#ifdef  FILETYPE_KEYWORDS
+#error "FILETYPE_KEYWORDS already defined."
+#endif
+#define FILETYPE_KEYWORDS public virtual
+
 namespace IMPLEMENTATION(Files) {
 
-class Functions   {};
+class FileType {};
 
-class Variables   {};
+class Functions:   FILETYPE_KEYWORDS FileType {};
 
-class Usings      {};
+class Variables:   FILETYPE_KEYWORDS FileType {};
 
-class Declaration {};
+class Types:       FILETYPE_KEYWORDS FileType {};
 
-class Header      {};
+class Declaration: FILETYPE_KEYWORDS FileType {};
 
-class All         {};
+class Partial:     FILETYPE_KEYWORDS FileType {};
+
+class Complete:    FILETYPE_KEYWORDS FileType {};
 
 }
 
-#define INHERITENCE_KEYWORDS public virtual
+#ifdef  FUNCTIONS
+#error "FUNCTIONS already defined."
+#endif
+#ifdef  VARIABLES
+#error "VARIABLES already defined."
+#endif
+#ifdef  TYPES
+#error "TYPES already defined."
+#endif
 
-#define   FUNCTIONS_TYPE INHERITENCE_KEYWORDS Functions
-#define   VARIABLES_TYPE INHERITENCE_KEYWORDS Variables
-#define      USINGS_TYPE INHERITENCE_KEYWORDS Usings
-#define DECLARATION_TYPE INHERITENCE_KEYWORDS Declaration
-#define      HEADER_TYPE INHERITENCE_KEYWORDS Header
-#define         ALL_TYPE INHERITENCE_KEYWORDS All
+#ifdef  DECLARATION_CLASS
+#error "DECLARATION already defined."
+#endif
+#ifdef  PARTIAL_CLASS
+#error "PARTIAL already defined."
+#endif
+#ifdef  COMPLETE_CLASS
+#error "COMPLETE already defined."
+#endif
 
-#undef FILE
+#define   FUNCTIONS FILETYPE_KEYWORDS Functions
+#define   VARIABLES FILETYPE_KEYWORDS Variables
+#define       TYPES FILETYPE_KEYWORDS Types
+
+#define DECLARATION_CLASS FILETYPE_KEYWORDS Declaration
+#define     PARTIAL_CLASS FILETYPE_KEYWORDS Partial
+#define    COMPLETE_CLASS FILETYPE_KEYWORDS Complete
 
 #endif

@@ -14,7 +14,7 @@
 
 namespace FILE {
 
-class Style: USINGS_TYPE {
+class Style: TYPES {
 
 	public:
 

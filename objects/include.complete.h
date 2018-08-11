@@ -5,7 +5,8 @@
 
 #include "../conventions/include.h"
 
-#include ALL(object)
-#include ALL(list)
+#include COMPLETE(object)
+#include COMPLETE(list)
+#include COMPLETE(variadics)
 
 #endif

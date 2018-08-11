@@ -13,15 +13,15 @@
 #endif
 #define DECLARATION(_name_) QUOTE(_name_/_name_.declaration.h)
 
-#ifdef  HEADER
-#error "HEADER already defined."
+#ifdef  PARTIAL
+#error "PARTIAL already defined."
 #endif
-#define HEADER(_name_) QUOTE(_name_/_name_.header.h)
+#define PARTIAL(_name_) QUOTE(_name_/_name_.partial.h)
 
-#ifdef  ALL
-#error "ALL already defined."
+#ifdef  COMPLETE
+#error "COMPLETE already defined."
 #endif
-#define ALL(_name_) QUOTE(_name_/_name_.all.h)
+#define COMPLETE(_name_) QUOTE(_name_/_name_.complete.h)
 
 #ifdef  IMPLEMENTATION
 #error "IMPLEMENTATION already defined."
